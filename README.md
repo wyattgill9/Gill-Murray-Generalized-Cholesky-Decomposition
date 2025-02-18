@@ -1,2 +1,3 @@
 # Gill-Murray-Generalized-Cholesky-Decomposition
-Code for the Gill-Murray generalized Cholesky Decomposition across multiple languages
+
+**[ORIGINAL PAPER}(https://gking.harvard.edu/files/help.pdf)**
