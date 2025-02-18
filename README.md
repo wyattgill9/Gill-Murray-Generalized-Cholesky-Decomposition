@@ -12,5 +12,4 @@
 - Python
 - C
 - C++
-- Haskell
 - Matlab
