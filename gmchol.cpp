@@ -19,7 +19,7 @@
  * Output: Modified matrix A + E where E is a diagonal correction matrix
  * Returns: R'R where R is upper triangular
  */
-std::vector<std::vector<double>> gmchol(const std::vector<std::vector<double>>& A) {
+auto gmchol(const std::vector<std::vector<double>>& A) -> std::vector<std::vector<double>> {
     int n = A.size();
     
     std::vector<std::vector<double>> R(n, std::vector<double>(n, 0.0));
@@ -109,23 +109,19 @@ std::vector<std::vector<double>> gmchol(const std::vector<std::vector<double>>& 
     return result;
 }
 
-// Example
 int main() {
-    int n = 3; // Matrix size
-    std::vector<std::vector<double>> A(n, std::vector<double>(n));
-    std::vector<std::vector<double>> R(n, std::vector<double>(n, 0.0)); 
+    std::vector<std::vector<double>> A(3, std::vector<double>(3));
 
-    // Symmetric positive definite matrix
     A[0][0] = 4; A[0][1] = 12; A[0][2] = -16;
     A[1][0] = 12; A[1][1] = 37; A[1][2] = -43;
     A[2][0] = -16; A[2][1] = -43; A[2][2] = 98;
 
-    gmchol(A, n, R);
+    auto res = gmchol(A);
 
     std::cout << "R matrix:\n";
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            std::cout << R[i][j] << " ";
+    for (int i = 0; i < A.size(); i++) {
+        for (int j = 0; j < A.size(); j++) {
+            std::cout << res[i][j] << " ";
         }
         std::cout << "\n";
     }

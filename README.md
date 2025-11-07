@@ -8,8 +8,4 @@
 
 **SUPPORTED LANGUAGES**
 - Gauss (ORIGINAL)
-- R
-- Python
-- C
 - C++
-- Matlab
